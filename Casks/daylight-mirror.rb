@@ -1,8 +1,8 @@
 cask "daylight-mirror" do
-  version "1.0"
-  sha256 "d6e1a7b5a532e514b9afec95713d11fd687e8226a073e6e21b936f013dbc7486"
+  version "1.3"
+  sha256 "3232e2e87dc9716960e568dea46ababc520f4c8f10c959bd10dc04922527ad0a"
 
-  url "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror-#{version}-mac.zip"
+  url "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror-v#{version}.dmg"
   name "Daylight Mirror"
   desc "Use your Daylight DC-1 as a real-time external display for your Mac"
   homepage "https://github.com/welfvh/daylight-mirror"
@@ -17,7 +17,7 @@ cask "daylight-mirror" do
       args: [
         "-sL",
         "-o", "#{staged_path}/DaylightMirror.apk",
-        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror.apk"
+        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/app-debug.apk"
       ]
     system_command "mkdir", args: ["-p", "/opt/homebrew/share/daylight-mirror"]
     system_command "cp",
