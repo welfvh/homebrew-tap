@@ -16,12 +16,12 @@ cask "daylight-mirror" do
     system_command "curl",
       args: [
         "-sL",
-        "-o", "#{staged_path}/DaylightMirror.apk",
-        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror.apk"
+        "-o", "#{staged_path}/app-debug.apk",
+        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/app-debug.apk"
       ]
     system_command "mkdir", args: ["-p", "/opt/homebrew/share/daylight-mirror"]
     system_command "cp",
-      args: ["#{staged_path}/DaylightMirror.apk", "/opt/homebrew/share/daylight-mirror/"]
+      args: ["#{staged_path}/app-debug.apk", "/opt/homebrew/share/daylight-mirror/"]
   end
 
   uninstall_postflight do
@@ -31,7 +31,7 @@ cask "daylight-mirror" do
   caveats <<~EOS
     To complete setup, install the Android app on your Daylight DC-1:
 
-      adb install /opt/homebrew/share/daylight-mirror/DaylightMirror.apk
+      adb install /opt/homebrew/share/daylight-mirror/app-debug.apk
 
     If adb is not installed: brew install android-platform-tools
 
