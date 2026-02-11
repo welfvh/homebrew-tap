@@ -8,6 +8,7 @@ cask "daylight-mirror" do
   homepage "https://github.com/welfvh/daylight-mirror"
 
   depends_on macos: ">= :sonoma"
+  depends_on formula: "android-platform-tools"
 
   app "Daylight Mirror.app"
 
@@ -33,10 +34,9 @@ cask "daylight-mirror" do
 
       adb install /opt/homebrew/share/daylight-mirror/DaylightMirror.apk
 
-    If adb is not installed: brew install android-platform-tools
-
     Enable USB debugging on the Daylight (one-time):
       Settings > About tablet > tap "Build number" 7 times
       Settings > Developer options > enable "USB debugging"
+    Connect the Daylight to your Mac via USB-C and tap "Allow" on the prompt.
   EOS
 end
