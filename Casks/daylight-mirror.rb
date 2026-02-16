@@ -1,6 +1,6 @@
 cask "daylight-mirror" do
   version "1.4"
-  sha256 "8fef385bafff2f51d303d0ad487512444b6f9cc50ed9ef47c2564956a6601dd9"
+  sha256 "c66af8def22401f4431f5b77d0266eee3774a3d096ddd20d092fadb81493ff44"
 
   url "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror-v#{version}.dmg"
   name "Daylight Mirror"
@@ -8,7 +8,7 @@ cask "daylight-mirror" do
   homepage "https://github.com/welfvh/daylight-mirror"
 
   depends_on macos: ">= :sonoma"
-  depends_on formula: "android-platform-tools"
+  depends_on cask: "android-platform-tools"
 
   app "Daylight Mirror.app"
 
