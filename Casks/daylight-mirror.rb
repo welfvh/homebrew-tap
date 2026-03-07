@@ -1,6 +1,6 @@
 cask "daylight-mirror" do
-  version "1.7.0"
-  sha256 "264cf1096b7c799ed68c0e69f8cd3e96ee187eee0b62c1ff55cfe4a72cc5123b"
+  version "1.8.0"
+  sha256 "52b4f7295c568e1e927cef61d8d300080a5218751de81dc6a92be275e4a15242"
 
   url "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror-v#{version}.dmg"
   name "Daylight Mirror"
