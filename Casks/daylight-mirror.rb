@@ -1,6 +1,6 @@
 cask "daylight-mirror" do
-  version "1.8.0"
-  sha256 "52b4f7295c568e1e927cef61d8d300080a5218751de81dc6a92be275e4a15242"
+  version "1.9.0"
+  sha256 "abd0e450ebf3aaf24638022a9a9a56798f27a833723ad425ada68b9c77416b81"
 
   url "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror-v#{version}.dmg"
   name "Daylight Mirror"
@@ -18,7 +18,7 @@ cask "daylight-mirror" do
       args: [
         "-sL",
         "-o", "#{staged_path}/DaylightMirror.apk",
-        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/app-debug.apk"
+        "https://github.com/welfvh/daylight-mirror/releases/download/v#{version}/DaylightMirror.apk"
       ]
     system_command "mkdir", args: ["-p", "/opt/homebrew/share/daylight-mirror"]
     system_command "cp",
